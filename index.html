@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SATELITAL | Internet satelital para tu hogar</title>
+  <meta name="description" content="SATELITAL - Prototipo académico de plataforma de internet satelital para el conjunto residencial Quintas del Marqués, Mosquera, Cundinamarca.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#inicio" class="navbar__logo">
+        <span class="navbar__logo-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="8" fill="currentColor"/>
+            <path d="M24 2C24 2 30 10 30 24C30 38 24 46 24 46" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+            <ellipse cx="24" cy="24" rx="22" ry="9" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+            <ellipse cx="24" cy="24" rx="9" ry="22" stroke="currentColor" stroke-width="1.5" opacity="0.3" transform="rotate(35 24 24)"/>
+          </svg>
+        </span>
+        SATELITAL
+      </a>
+
+      <nav class="navbar__menu" id="navMenu">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#planes" class="nav-link">Planes</a>
+        <a href="#como-funciona" class="nav-link">Cómo funciona</a>
+        <a href="#cobertura" class="nav-link">Cobertura</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+        <a href="#solicitud" class="btn btn--primary navbar__menu-cta">Solicitar servicio</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#solicitud" class="btn btn--primary btn--sm navbar__cta-desktop">Solicitar servicio</a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg">
+      <div class="hero__stars"></div>
+      <div class="hero__earth"></div>
+      <div class="hero__orbit hero__orbit--1"></div>
+      <div class="hero__orbit hero__orbit--2"></div>
+      <div class="hero__satellite" id="heroSatellite">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="42" y="40" width="16" height="20" rx="2" fill="#e8ecf5"/>
+          <rect x="6" y="44" width="30" height="12" rx="1.5" fill="#5b7fff" opacity="0.85"/>
+          <rect x="64" y="44" width="30" height="12" rx="1.5" fill="#5b7fff" opacity="0.85"/>
+          <line x1="36" y1="50" x2="42" y2="50" stroke="#aab4d4" stroke-width="2"/>
+          <line x1="58" y1="50" x2="64" y2="50" stroke="#aab4d4" stroke-width="2"/>
+          <circle cx="50" cy="34" r="6" fill="none" stroke="#e8ecf5" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="container hero__content">
+      <span class="badge fade-up">Prototipo académico &middot; Ingeniería de Sistemas</span>
+      <h1 class="hero__title fade-up">Internet satelital,<br><span class="text-gradient">conectado contigo.</span></h1>
+      <p class="hero__subtitle fade-up">Conectividad de alta velocidad para tu hogar, sin depender de las conexiones tradicionales.</p>
+      <div class="hero__actions fade-up">
+        <a href="#planes" class="btn btn--primary btn--lg">Ver planes</a>
+        <a href="#solicitud" class="btn btn--outline btn--lg">Solicitar servicio</a>
+      </div>
+
+      <div class="hero__stats fade-up">
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-count="250">0</span>
+          <span class="hero__stat-label">Mbps hasta</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-count="80">0</span>
+          <span class="hero__stat-label">% cobertura meta</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-count="24">0</span>
+          <span class="hero__stat-label">/7 soporte técnico</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span></span>
+      <p>Desplázate</p>
+    </div>
+  </section>
+
+  <!-- ===== BENEFICIOS ===== -->
+  <section class="section" id="beneficios">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">Ventajas</span>
+        <h2>Beneficios de SATELITAL</h2>
+        <p>Tecnología satelital de nueva generación pensada para la vida moderna.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card card--benefit reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Alta velocidad</h3>
+          <p>Navega, estudia y trabaja con velocidades de hasta 250 Mbps, ideales para múltiples dispositivos conectados a la vez.</p>
+        </article>
+
+        <article class="card card--benefit reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M7 12a5 5 0 0110 0M4 12a8 8 0 0116 0M1 12a11 11 0 0122 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Conectividad satelital</h3>
+          <p>Independiente de redes de cobre o fibra terrestre: la señal llega directo desde el espacio hasta tu vivienda.</p>
+        </article>
+
+        <article class="card card--benefit reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Cobertura amplia</h3>
+          <p>Diseñado para llegar a zonas urbanas y sectores donde las conexiones tradicionales no alcanzan o son inestables.</p>
+        </article>
+
+        <article class="card card--benefit reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Instalación profesional</h3>
+          <p>Un equipo técnico capacitado se encarga de instalar y configurar tu antena y red interna de forma segura.</p>
+        </article>
+
+        <article class="card card--benefit reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Soporte técnico</h3>
+          <p>Acompañamiento continuo para resolver fallas, dudas y garantizar la mejor experiencia posible.</p>
+        </article>
+
+        <article class="card card--benefit reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <h3>Tecnología de nueva generación</h3>
+          <p>Basado en constelaciones de satélites de órbita baja, con menor latencia que los sistemas satelitales tradicionales.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PLANES ===== -->
+  <section class="section section--alt" id="planes">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">Planes</span>
+        <h2>Elige el plan ideal para tu hogar</h2>
+        <p>Precios y velocidades de referencia para este prototipo académico. Fácilmente ajustables en una etapa posterior.</p>
+      </div>
+
+      <div class="grid grid--3 plans">
+        <article class="card card--plan reveal" data-plan="Satelital Básico">
+          <div class="card--plan__header">
+            <h3>SATELITAL BÁSICO</h3>
+            <p class="card--plan__desc">Para hogares con uso ligero de internet</p>
+          </div>
+          <div class="card--plan__price">
+            <span class="price-currency">$</span>
+            <span class="price-amount" data-price="220000">220.000</span>
+            <span class="price-period">COP / mes</span>
+          </div>
+          <p class="card--plan__speed">Hasta <strong>120 Mbps</strong></p>
+          <ul class="card--plan__list">
+            <li>Internet satelital residencial</li>
+            <li>1 antena receptora</li>
+            <li>Soporte técnico estándar</li>
+            <li>Instalación incluida</li>
+          </ul>
+          <button class="btn btn--outline btn--block select-plan" data-plan="Satelital Básico" data-price="$220.000 COP/mes · 120 Mbps">Solicitar este plan</button>
+        </article>
+
+        <article class="card card--plan card--plan--featured reveal" data-plan="Satelital Hogar">
+          <span class="card--plan__tag">Más popular</span>
+          <div class="card--plan__header">
+            <h3>SATELITAL HOGAR</h3>
+            <p class="card--plan__desc">El equilibrio perfecto entre velocidad y precio</p>
+          </div>
+          <div class="card--plan__price">
+            <span class="price-currency">$</span>
+            <span class="price-amount" data-price="320000">320.000</span>
+            <span class="price-period">COP / mes</span>
+          </div>
+          <p class="card--plan__speed">Hasta <strong>250 Mbps</strong></p>
+          <ul class="card--plan__list">
+            <li>Internet satelital para el hogar</li>
+            <li>Conectividad multi-dispositivo</li>
+            <li>Soporte técnico prioritario</li>
+            <li>Instalación profesional incluida</li>
+          </ul>
+          <button class="btn btn--primary btn--block select-plan" data-plan="Satelital Hogar" data-price="$320.000 COP/mes · 250 Mbps">Solicitar este plan</button>
+        </article>
+
+        <article class="card card--plan reveal" data-plan="Satelital Pro">
+          <div class="card--plan__header">
+            <h3>SATELITAL PRO</h3>
+            <p class="card--plan__desc">Para teletrabajo, streaming y negocios en casa</p>
+          </div>
+          <div class="card--plan__price">
+            <span class="price-currency">$</span>
+            <span class="price-amount" data-price="450000">450.000</span>
+            <span class="price-period">COP / mes</span>
+          </div>
+          <p class="card--plan__speed">Hasta <strong>400 Mbps</strong></p>
+          <ul class="card--plan__list">
+            <li>Internet satelital de alta demanda</li>
+            <li>Baja latencia prioritaria</li>
+            <li>Soporte técnico 24/7</li>
+            <li>Instalación y mantenimiento incluidos</li>
+          </ul>
+          <button class="btn btn--outline btn--block select-plan" data-plan="Satelital Pro" data-price="$450.000 COP/mes · 400 Mbps">Solicitar este plan</button>
+        </article>
+      </div>
+
+      <p class="plans__note reveal">* Precios y velocidades de referencia para fines académicos. Sujetos a ajuste según definición real del proyecto.</p>
+    </div>
+  </section>
+
+  <!-- ===== CÓMO FUNCIONA ===== -->
+  <section class="section" id="como-funciona">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">Tecnología</span>
+        <h2>¿Cómo funciona el internet satelital?</h2>
+        <p>Un proceso sencillo que lleva la conexión desde el espacio hasta tu sala.</p>
+      </div>
+
+      <div class="how-it-works reveal">
+        <div class="how-step">
+          <div class="how-step__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 11l9-7 9 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v10h14V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>1. Hogar</h4>
+          <p>Todo comienza en tu vivienda, donde se instala una pequeña antena receptora con vista despejada al cielo.</p>
+        </div>
+        <div class="how-arrow">→</div>
+        <div class="how-step">
+          <div class="how-step__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 20l7-16M11 4l9 4-4 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>2. Antena</h4>
+          <p>La antena envía y recibe señales, comunicándose directamente con los satélites que pasan sobre la zona.</p>
+        </div>
+        <div class="how-arrow">→</div>
+        <div class="how-step">
+          <div class="how-step__icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <h4>3. Satélite</h4>
+          <p>Una red de satélites en órbita baja recibe la señal y la transmite hacia una estación en tierra.</p>
+        </div>
+        <div class="how-arrow">→</div>
+        <div class="how-step">
+          <div class="how-step__icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="8" width="20" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M6 8V6a2 2 0 012-2h8a2 2 0 012 2v2" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <h4>4. Red de internet</h4>
+          <p>La estación terrestre conecta la señal con la red global de internet en cuestión de milisegundos.</p>
+        </div>
+        <div class="how-arrow">→</div>
+        <div class="how-step">
+          <div class="how-step__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 12l9-9 9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v10h14V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="16" r="1.4" fill="currentColor"/></svg>
+          </div>
+          <h4>5. De vuelta al hogar</h4>
+          <p>La información regresa hasta tu router en segundos, listo para navegar, estudiar o trabajar sin interrupciones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COBERTURA ===== -->
+  <section class="section section--alt" id="cobertura">
+    <div class="container">
+      <div class="coverage reveal">
+        <div class="coverage__info">
+          <span class="eyebrow">Zona piloto</span>
+          <h2>Cobertura en Mosquera, Cundinamarca</h2>
+          <p class="coverage__location">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+            Conjunto Residencial <strong>Quintas del Marqués</strong>
+          </p>
+          <p>Este prototipo académico toma como zona piloto el conjunto residencial Quintas del Marqués, en el municipio de Mosquera, Cundinamarca, Colombia. La meta del proyecto es alcanzar una cobertura mínima del <strong>80% de los hogares objetivo en 12 meses</strong>, con un nivel de satisfacción superior al <strong>85% luego de tres meses de uso</strong>.</p>
+
+          <div class="coverage__disclaimer">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <p>Los datos de cobertura mostrados corresponden a las metas de este prototipo académico y no representan información oficial ni real del servicio Starlink.</p>
+          </div>
+
+          <div class="coverage__stats">
+            <div>
+              <span class="coverage__stat-num">80%</span>
+              <span class="coverage__stat-label">Meta de cobertura en 12 meses</span>
+            </div>
+            <div>
+              <span class="coverage__stat-num">85%</span>
+              <span class="coverage__stat-label">Meta de satisfacción del usuario</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="coverage__map">
+          <div class="coverage__radar">
+            <div class="radar__ring radar__ring--1"></div>
+            <div class="radar__ring radar__ring--2"></div>
+            <div class="radar__ring radar__ring--3"></div>
+            <div class="radar__sweep"></div>
+            <div class="radar__pin">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" fill="currentColor"/></svg>
+              <span>Quintas del Marqués</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FORMULARIO / SOLICITUD ===== -->
+  <section class="section" id="solicitud">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">Solicitud</span>
+        <h2>Solicita tu servicio SATELITAL</h2>
+        <p>Completa el formulario y nuestro equipo se pondrá en contacto contigo para continuar con el proceso.</p>
+      </div>
+
+      <div class="request reveal">
+        <form id="requestForm" class="request-form" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="fullName">Nombre completo *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Ej: Sebastián Gaitán" autocomplete="name">
+              <span class="form-error" id="err-fullName"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Teléfono *</label>
+              <input type="tel" id="phone" name="phone" placeholder="Ej: 3001234567" autocomplete="tel">
+              <span class="form-error" id="err-phone"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Correo electrónico *</label>
+              <input type="email" id="email" name="email" placeholder="Ej: correo@ejemplo.com" autocomplete="email">
+              <span class="form-error" id="err-email"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="address">Dirección *</label>
+              <input type="text" id="address" name="address" placeholder="Ej: Calle 10 # 5-20" autocomplete="street-address">
+              <span class="form-error" id="err-address"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="residential">Conjunto residencial *</label>
+              <input type="text" id="residential" name="residential" placeholder="Ej: Quintas del Marqués" value="Quintas del Marqués">
+              <span class="form-error" id="err-residential"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="unit">Número de casa / apartamento *</label>
+              <input type="text" id="unit" name="unit" placeholder="Ej: Casa 14 / Apto 302">
+              <span class="form-error" id="err-unit"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="plan">Plan seleccionado *</label>
+              <select id="plan" name="plan">
+                <option value="">Selecciona un plan</option>
+                <option value="Satelital Básico">Satelital Básico — $220.000 COP/mes</option>
+                <option value="Satelital Hogar">Satelital Hogar — $320.000 COP/mes</option>
+                <option value="Satelital Pro">Satelital Pro — $450.000 COP/mes</option>
+              </select>
+              <span class="form-error" id="err-plan"></span>
+            </div>
+
+            <div class="form-field form-field--full">
+              <label for="comments">Comentarios</label>
+              <textarea id="comments" name="comments" rows="4" placeholder="Cuéntanos algo adicional sobre tu solicitud (opcional)"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg btn--block">Enviar solicitud</button>
+        </form>
+
+        <div class="request-success" id="requestSuccess" hidden>
+          <div class="request-success__icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>¡Solicitud enviada con éxito!</h3>
+          <p>Hemos recibido tu solicitud para el plan <strong id="successPlan">—</strong>. En esta versión de prototipo, tu solicitud se guarda localmente. Pronto podrás consultar su estado desde la plataforma.</p>
+          <p class="request-success__ref">Número de referencia: <strong id="successRef">—</strong></p>
+          <button class="btn btn--outline" id="newRequestBtn">Enviar otra solicitud</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOSOTROS ===== -->
+  <section class="section section--alt" id="nosotros">
+    <div class="container">
+      <div class="about reveal">
+        <span class="eyebrow">Nosotros</span>
+        <h2>Un proyecto académico con visión real</h2>
+        <p>SATELITAL es un proyecto académico desarrollado en el programa de Ingeniería de Sistemas, enfocado en diseñar una solución tecnológica que facilite la consulta y solicitud de servicios de internet satelital para comunidades como el conjunto residencial Quintas del Marqués, en Mosquera, Cundinamarca.</p>
+        <p>Este prototipo busca sentar las bases de una plataforma que, en etapas posteriores, se integrará con una API REST, un backend en Java Spring Boot o Python Flask, y una base de datos MySQL, para gestionar clientes, planes, solicitudes e instalaciones de forma real.</p>
+
+        <div class="about__grid">
+          <div class="about__item">
+            <h4>Misión</h4>
+            <p>Acercar la conectividad satelital de alta velocidad a hogares con acceso limitado a internet tradicional.</p>
+          </div>
+          <div class="about__item">
+            <h4>Visión</h4>
+            <p>Convertirse en una plataforma de referencia para la gestión de servicios de internet satelital en comunidades locales.</p>
+          </div>
+          <div class="about__item">
+            <h4>Enfoque</h4>
+            <p>Tecnología, inclusión digital y desarrollo comunitario como pilares del proyecto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow">Contacto</span>
+        <h2>Hablemos</h2>
+        <p>¿Tienes preguntas sobre el servicio? Comunícate con nosotros por cualquiera de estos medios.</p>
+      </div>
+
+      <div class="contact-grid reveal">
+        <a href="mailto:sebastiangaitanmfc@gmail.com" class="contact-card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2 6l10 7 10-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Correo electrónico</h4>
+          <p>sebastiangaitanmfc@gmail.com</p>
+        </a>
+
+        <a href="tel:+573208715796" class="contact-card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.5 2.1L8 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Teléfono</h4>
+          <p>+57 320 871 5796</p>
+        </a>
+
+        <a href="https://wa.me/573208715796" target="_blank" rel="noopener" class="contact-card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2z" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 8.7c.2-.5.5-.5.8-.5h.6c.2 0 .5 0 .7.5.2.5.7 1.7.8 1.8.1.2.1.4 0 .6-.1.2-.2.3-.4.5s-.4.4-.2.7c.2.4 1 1.5 2 2.2 1.2.9 1.6 1 1.9.9.2-.1.7-.7.9-1 .2-.2.4-.2.6-.1l1.7.9c.2.1.4.2.4.4.1.6-.1 1.5-.6 1.9-.5.5-1.6.9-2.4.7-1.9-.4-3.6-1.4-4.9-2.7-1.2-1.2-2.1-2.7-2.6-4.4-.2-.9.1-1.9.6-2.4z" fill="currentColor"/></svg>
+          </div>
+          <h4>WhatsApp</h4>
+          <p>+57 320 871 5796</p>
+        </a>
+
+        <div class="contact-card contact-card--static">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <h4>Ubicación</h4>
+          <p>Quintas del Marqués, Mosquera, Cundinamarca</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="cta reveal">
+    <div class="container cta__inner">
+      <h2>¿Listo para una conexión sin límites?</h2>
+      <p>Solicita hoy tu servicio SATELITAL y forma parte de la transformación digital de Mosquera.</p>
+      <a href="#solicitud" class="btn btn--primary btn--lg">Solicitar servicio</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="navbar__logo footer__logo">
+          <span class="navbar__logo-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="8" fill="currentColor"/>
+              <ellipse cx="24" cy="24" rx="22" ry="9" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+              <ellipse cx="24" cy="24" rx="9" ry="22" stroke="currentColor" stroke-width="1.5" opacity="0.3" transform="rotate(35 24 24)"/>
+            </svg>
+          </span>
+          SATELITAL
+        </span>
+        <p>Mosquera, Cundinamarca, Colombia</p>
+        <p class="footer__academic">Proyecto académico &middot; Ingeniería de Sistemas</p>
+      </div>
+
+      <div class="footer__links">
+        <div>
+          <h5>Navegación</h5>
+          <a href="#inicio">Inicio</a>
+          <a href="#planes">Planes</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#cobertura">Cobertura</a>
+        </div>
+        <div>
+          <h5>Compañía</h5>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto">Contacto</a>
+          <a href="#solicitud">Solicitar servicio</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 SATELITAL. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Toast de notificación -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
