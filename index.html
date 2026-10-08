@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SATELITAL | Internet satelital para tu hogar</title>
-  <meta name="description" content="SATELITAL - Prototipo académico de plataforma de internet satelital para el conjunto residencial Quintas del Marqués, Mosquera, Cundinamarca.">
+  <title>SATELITAL | Internet satelital para negocios de Mosquera</title>
+  <meta name="description" content="SATELITAL - Prototipo académico de plataforma de internet satelital para los negocios locales de Mosquera, Cundinamarca (zona urbana y rural).">
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <script>try{var t=localStorage.getItem('satelital_theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -39,6 +40,10 @@
       </nav>
 
       <div class="navbar__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a tema claro" title="Cambiar tema">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><path d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 019.8 3.5a8.5 8.5 0 1010.7 10.7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </button>
         <a href="#solicitud" class="btn btn--primary btn--sm navbar__cta-desktop">Solicitar servicio</a>
         <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -69,7 +74,7 @@
     <div class="container hero__content">
       <span class="badge fade-up">Prototipo académico &middot; Ingeniería de Sistemas</span>
       <h1 class="hero__title fade-up">Internet satelital,<br><span class="text-gradient">conectado contigo.</span></h1>
-      <p class="hero__subtitle fade-up">Conectividad de alta velocidad para tu hogar, sin depender de las conexiones tradicionales.</p>
+      <p class="hero__subtitle fade-up">Conectividad de alta velocidad para los negocios de Mosquera, sin depender de las conexiones tradicionales.</p>
       <div class="hero__actions fade-up">
         <a href="#planes" class="btn btn--primary btn--lg">Ver planes</a>
         <a href="#solicitud" class="btn btn--outline btn--lg">Solicitar servicio</a>
@@ -77,16 +82,16 @@
 
       <div class="hero__stats fade-up">
         <div class="hero__stat">
-          <span class="hero__stat-num" data-count="250">0</span>
+          <span class="hero__stat-num" data-count="400">0</span>
           <span class="hero__stat-label">Mbps hasta</span>
         </div>
         <div class="hero__stat">
           <span class="hero__stat-num" data-count="80">0</span>
-          <span class="hero__stat-label">% cobertura meta</span>
+          <span class="hero__stat-label">% de negocios meta</span>
         </div>
         <div class="hero__stat">
-          <span class="hero__stat-num" data-count="24">0</span>
-          <span class="hero__stat-label">/7 soporte técnico</span>
+          <span class="hero__stat-num" data-count="50">0</span>
+          <span class="hero__stat-label">negocios en el piloto (aprox.)</span>
         </div>
       </div>
     </div>
@@ -102,8 +107,8 @@
     <div class="container">
       <div class="section__head reveal">
         <span class="eyebrow">Ventajas</span>
-        <h2>Beneficios de SATELITAL</h2>
-        <p>Tecnología satelital de nueva generación pensada para la vida moderna.</p>
+        <h2>Beneficios para tu negocio</h2>
+        <p>Conectividad pensada para vender, cobrar y operar sin interrupciones.</p>
       </div>
 
       <div class="grid grid--3">
@@ -111,8 +116,8 @@
           <div class="card__icon">
             <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
           </div>
-          <h3>Alta velocidad</h3>
-          <p>Navega, estudia y trabaja con velocidades de hasta 250 Mbps, ideales para múltiples dispositivos conectados a la vez.</p>
+          <h3>Ventas y pagos sin caídas</h3>
+          <p>Procesa pagos electrónicos, atiende pedidos y consulta tu inventario en línea con velocidades de hasta 400 Mbps.</p>
         </article>
 
         <article class="card card--benefit reveal">
@@ -120,15 +125,15 @@
             <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M7 12a5 5 0 0110 0M4 12a8 8 0 0116 0M1 12a11 11 0 0122 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           </div>
           <h3>Conectividad satelital</h3>
-          <p>Independiente de redes de cobre o fibra terrestre: la señal llega directo desde el espacio hasta tu vivienda.</p>
+          <p>Independiente de redes de cobre o fibra terrestre: la señal llega directo desde el espacio hasta tu local, incluso en veredas sin cableado.</p>
         </article>
 
         <article class="card card--benefit reveal">
           <div class="card__icon">
             <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
           </div>
-          <h3>Cobertura amplia</h3>
-          <p>Diseñado para llegar a zonas urbanas y sectores donde las conexiones tradicionales no alcanzan o son inestables.</p>
+          <h3>Casco urbano y veredas</h3>
+          <p>Pensado para negocios del casco urbano y de las zonas rurales de Mosquera donde la conexión actual es limitada o inestable.</p>
         </article>
 
         <article class="card card--benefit reveal">
@@ -136,15 +141,15 @@
             <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           </div>
           <h3>Instalación profesional</h3>
-          <p>Un equipo técnico capacitado se encarga de instalar y configurar tu antena y red interna de forma segura.</p>
+          <p>Un equipo técnico capacitado instala la antena, configura la red de tu negocio y capacita a tu personal en el uso del servicio.</p>
         </article>
 
         <article class="card card--benefit reveal">
           <div class="card__icon">
             <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>Soporte técnico</h3>
-          <p>Acompañamiento continuo para resolver fallas, dudas y garantizar la mejor experiencia posible.</p>
+          <h3>Soporte con seguimiento</h3>
+          <p>Reporta una falla y sigue su estado desde la plataforma. Las incidencias que afectan a varios negocios de una zona se atienden de forma prioritaria.</p>
         </article>
 
         <article class="card card--benefit reveal">
@@ -163,74 +168,74 @@
     <div class="container">
       <div class="section__head reveal">
         <span class="eyebrow">Planes</span>
-        <h2>Elige el plan ideal para tu hogar</h2>
+        <h2>Elige el plan ideal para tu negocio</h2>
         <p>Precios y velocidades de referencia para este prototipo académico. Fácilmente ajustables en una etapa posterior.</p>
       </div>
 
       <div class="grid grid--3 plans">
-        <article class="card card--plan reveal" data-plan="Satelital Básico">
+        <article class="card card--plan reveal" data-plan="Satelital Emprende">
           <div class="card--plan__header">
-            <h3>SATELITAL BÁSICO</h3>
-            <p class="card--plan__desc">Para hogares con uso ligero de internet</p>
+            <h3>SATELITAL EMPRENDE</h3>
+            <p class="card--plan__desc">Para uso básico: pagos, mensajería y consultas</p>
           </div>
           <div class="card--plan__price">
             <span class="price-currency">$</span>
-            <span class="price-amount" data-price="220000">220.000</span>
+            <span class="price-amount" data-price="200000">200.000</span>
             <span class="price-period">COP / mes</span>
           </div>
           <p class="card--plan__speed">Hasta <strong>120 Mbps</strong></p>
           <ul class="card--plan__list">
-            <li>Internet satelital residencial</li>
-            <li>1 antena receptora</li>
-            <li>Soporte técnico estándar</li>
-            <li>Instalación incluida</li>
+            <li>Internet satelital para el negocio</li>
+            <li>Instalación profesional incluida</li>
+            <li>Capacitación al personal en el uso del servicio</li>
+            <li>Soporte técnico con seguimiento de solicitudes</li>
           </ul>
-          <button class="btn btn--outline btn--block select-plan" data-plan="Satelital Básico" data-price="$220.000 COP/mes · 120 Mbps">Solicitar este plan</button>
+          <button class="btn btn--outline btn--block select-plan" data-plan="Satelital Emprende" data-price="$200.000 COP/mes · 120 Mbps">Solicitar este plan</button>
         </article>
 
-        <article class="card card--plan card--plan--featured reveal" data-plan="Satelital Hogar">
-          <span class="card--plan__tag">Más popular</span>
+        <article class="card card--plan card--plan--featured reveal" data-plan="Satelital Negocio">
+          <span class="card--plan__tag">Recomendado</span>
           <div class="card--plan__header">
-            <h3>SATELITAL HOGAR</h3>
-            <p class="card--plan__desc">El equilibrio perfecto entre velocidad y precio</p>
+            <h3>SATELITAL NEGOCIO</h3>
+            <p class="card--plan__desc">Para varios equipos conectados a la vez</p>
           </div>
           <div class="card--plan__price">
             <span class="price-currency">$</span>
-            <span class="price-amount" data-price="320000">320.000</span>
+            <span class="price-amount" data-price="300000">300.000</span>
             <span class="price-period">COP / mes</span>
           </div>
           <p class="card--plan__speed">Hasta <strong>250 Mbps</strong></p>
           <ul class="card--plan__list">
-            <li>Internet satelital para el hogar</li>
-            <li>Conectividad multi-dispositivo</li>
-            <li>Soporte técnico prioritario</li>
+            <li>Internet satelital para el negocio</li>
             <li>Instalación profesional incluida</li>
+            <li>Capacitación al personal en el uso del servicio</li>
+            <li>Soporte técnico con seguimiento de solicitudes</li>
           </ul>
-          <button class="btn btn--primary btn--block select-plan" data-plan="Satelital Hogar" data-price="$320.000 COP/mes · 250 Mbps">Solicitar este plan</button>
+          <button class="btn btn--primary btn--block select-plan" data-plan="Satelital Negocio" data-price="$300.000 COP/mes · 250 Mbps">Solicitar este plan</button>
         </article>
 
-        <article class="card card--plan reveal" data-plan="Satelital Pro">
+        <article class="card card--plan reveal" data-plan="Satelital Empresa">
           <div class="card--plan__header">
-            <h3>SATELITAL PRO</h3>
-            <p class="card--plan__desc">Para teletrabajo, streaming y negocios en casa</p>
+            <h3>SATELITAL EMPRESA</h3>
+            <p class="card--plan__desc">Para uso intensivo y mayor cantidad de equipos</p>
           </div>
           <div class="card--plan__price">
             <span class="price-currency">$</span>
-            <span class="price-amount" data-price="450000">450.000</span>
+            <span class="price-amount" data-price="400000">400.000</span>
             <span class="price-period">COP / mes</span>
           </div>
           <p class="card--plan__speed">Hasta <strong>400 Mbps</strong></p>
           <ul class="card--plan__list">
-            <li>Internet satelital de alta demanda</li>
-            <li>Baja latencia prioritaria</li>
-            <li>Soporte técnico 24/7</li>
-            <li>Instalación y mantenimiento incluidos</li>
+            <li>Internet satelital para el negocio</li>
+            <li>Instalación profesional incluida</li>
+            <li>Capacitación al personal en el uso del servicio</li>
+            <li>Soporte técnico con seguimiento de solicitudes</li>
           </ul>
-          <button class="btn btn--outline btn--block select-plan" data-plan="Satelital Pro" data-price="$450.000 COP/mes · 400 Mbps">Solicitar este plan</button>
+          <button class="btn btn--outline btn--block select-plan" data-plan="Satelital Empresa" data-price="$400.000 COP/mes · 400 Mbps">Solicitar este plan</button>
         </article>
       </div>
 
-      <p class="plans__note reveal">* Precios y velocidades de referencia para fines académicos. Sujetos a ajuste según definición real del proyecto.</p>
+      <p class="plans__note reveal">* Precios y velocidades de referencia para fines académicos. Sujetos a ajuste según definición real del proyecto.<br>¿Eres parte de un gremio o asociación de comerciantes? Puedes coordinar una instalación colectiva para los negocios afiliados.</p>
     </div>
   </section>
 
@@ -240,16 +245,16 @@
       <div class="section__head reveal">
         <span class="eyebrow">Tecnología</span>
         <h2>¿Cómo funciona el internet satelital?</h2>
-        <p>Un proceso sencillo que lleva la conexión desde el espacio hasta tu sala.</p>
+        <p>Un proceso sencillo que lleva la conexión desde el espacio hasta tu negocio.</p>
       </div>
 
       <div class="how-it-works reveal">
         <div class="how-step">
           <div class="how-step__icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M3 11l9-7 9 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v10h14V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 9l1.5-5h13L20 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 9a2.67 2.67 0 005.33 0 2.67 2.67 0 005.34 0A2.67 2.67 0 0020 9" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M5.5 12v8h13v-8M10 20v-4h4v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h4>1. Hogar</h4>
-          <p>Todo comienza en tu vivienda, donde se instala una pequeña antena receptora con vista despejada al cielo.</p>
+          <h4>1. Tu negocio</h4>
+          <p>Todo comienza en tu local, donde se instala una pequeña antena receptora con vista despejada al cielo.</p>
         </div>
         <div class="how-arrow">→</div>
         <div class="how-step">
@@ -278,11 +283,22 @@
         <div class="how-arrow">→</div>
         <div class="how-step">
           <div class="how-step__icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M3 12l9-9 9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v10h14V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="16" r="1.4" fill="currentColor"/></svg>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 9l1.5-5h13L20 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 9a2.67 2.67 0 005.33 0 2.67 2.67 0 005.34 0A2.67 2.67 0 0020 9" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M5.5 12v8h13v-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="16" r="1.4" fill="currentColor"/></svg>
           </div>
-          <h4>5. De vuelta al hogar</h4>
-          <p>La información regresa hasta tu router en segundos, listo para navegar, estudiar o trabajar sin interrupciones.</p>
+          <h4>5. De vuelta al negocio</h4>
+          <p>La información regresa hasta tu router en segundos, lista para cobrar, vender y atender a tus clientes sin interrupciones.</p>
         </div>
+      </div>
+
+      <div class="process reveal">
+        <h3>Después de solicitar el servicio</h3>
+        <ol class="process__list">
+          <li><strong>Verificamos la cobertura</strong><span>Revisamos que tu punto sea técnicamente viable antes de programar nada.</span></li>
+          <li><strong>Programamos la visita</strong><span>Asignamos un técnico y preparamos los equipos.</span></li>
+          <li><strong>Instalamos</strong><span>Montamos la antena y configuramos la red de tu negocio.</span></li>
+          <li><strong>Activamos y probamos</strong><span>Medimos velocidad y estabilidad antes de entregarte el servicio.</span></li>
+          <li><strong>Capacitamos a tu equipo</strong><span>Te explicamos cómo usar el servicio y cómo reportar una falla.</span></li>
+        </ol>
       </div>
     </div>
   </section>
@@ -296,23 +312,27 @@
           <h2>Cobertura en Mosquera, Cundinamarca</h2>
           <p class="coverage__location">
             <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
-            Conjunto Residencial <strong>Quintas del Marqués</strong>
+            <strong>Mosquera</strong>, Cundinamarca &middot; casco urbano y veredas
           </p>
-          <p>Este prototipo académico toma como zona piloto el conjunto residencial Quintas del Marqués, en el municipio de Mosquera, Cundinamarca, Colombia. La meta del proyecto es alcanzar una cobertura mínima del <strong>80% de los hogares objetivo en 12 meses</strong>, con un nivel de satisfacción superior al <strong>85% luego de tres meses de uso</strong>.</p>
+          <p>El proyecto se despliega por fases: primero un piloto controlado en un sector comercial y en una o dos veredas priorizadas, según el diagnóstico de conectividad. Con los resultados del piloto se define el ritmo de expansión al resto de los negocios locales. La meta es cubrir al menos el <strong>80% de los negocios objetivo en 12 meses</strong>, con una satisfacción superior al <strong>85% después de tres meses de uso</strong>. Antes de programar cualquier instalación se verifica la cobertura y la factibilidad técnica del punto solicitado.</p>
 
           <div class="coverage__disclaimer">
             <svg viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-            <p>Los datos de cobertura mostrados corresponden a las metas de este prototipo académico y no representan información oficial ni real del servicio Starlink.</p>
+            <p>Las cifras mostradas son metas del proyecto académico, no resultados medidos. No representan información oficial ni cobertura real del servicio Starlink.</p>
           </div>
 
           <div class="coverage__stats">
             <div>
               <span class="coverage__stat-num">80%</span>
-              <span class="coverage__stat-label">Meta de cobertura en 12 meses</span>
+              <span class="coverage__stat-label">Meta de negocios cubiertos en 12 meses</span>
             </div>
             <div>
               <span class="coverage__stat-num">85%</span>
               <span class="coverage__stat-label">Meta de satisfacción del usuario</span>
+            </div>
+            <div>
+              <span class="coverage__stat-num">~50</span>
+              <span class="coverage__stat-label">Negocios en el piloto (aprox.)</span>
             </div>
           </div>
         </div>
@@ -323,11 +343,18 @@
             <div class="radar__ring radar__ring--2"></div>
             <div class="radar__ring radar__ring--3"></div>
             <div class="radar__sweep"></div>
+            <span class="radar__dot radar__dot--urban"></span>
+            <span class="radar__dot radar__dot--rural"></span>
             <div class="radar__pin">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" fill="currentColor"/></svg>
-              <span>Quintas del Marqués</span>
+              <span>Mosquera</span>
             </div>
           </div>
+          <ul class="coverage__legend">
+            <li><i class="legend-dot legend-dot--urban"></i>Sector comercial (piloto)</li>
+            <li><i class="legend-dot legend-dot--rural"></i>Veredas priorizadas (piloto)</li>
+          </ul>
+          <p class="coverage__caption">Representación ilustrativa; no es un mapa real.</p>
         </div>
       </div>
     </div>
@@ -338,58 +365,89 @@
     <div class="container">
       <div class="section__head reveal">
         <span class="eyebrow">Solicitud</span>
-        <h2>Solicita tu servicio SATELITAL</h2>
-        <p>Completa el formulario y nuestro equipo se pondrá en contacto contigo para continuar con el proceso.</p>
+        <h2>Solicita el servicio para tu negocio</h2>
+        <p>Completa el formulario y nuestro equipo se pondrá en contacto contigo para verificar la cobertura de tu punto y continuar con el proceso.</p>
       </div>
 
       <div class="request reveal">
         <form id="requestForm" class="request-form" novalidate>
           <div class="form-grid">
             <div class="form-field">
-              <label for="fullName">Nombre completo *</label>
-              <input type="text" id="fullName" name="fullName" placeholder="Ej: Sebastián Gaitán" autocomplete="name">
-              <span class="form-error" id="err-fullName"></span>
+              <label for="businessName">Nombre del negocio *</label>
+              <input type="text" id="businessName" name="businessName" placeholder="Ej: Tienda La Esquina" autocomplete="organization" aria-required="true" aria-describedby="err-businessName">
+              <span class="form-error" id="err-businessName" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="contactName">Persona de contacto *</label>
+              <input type="text" id="contactName" name="contactName" placeholder="Ej: Sebastián Gaitán" autocomplete="name" aria-required="true" aria-describedby="err-contactName">
+              <span class="form-error" id="err-contactName" role="alert"></span>
             </div>
 
             <div class="form-field">
               <label for="phone">Teléfono *</label>
-              <input type="tel" id="phone" name="phone" placeholder="Ej: 3001234567" autocomplete="tel">
-              <span class="form-error" id="err-phone"></span>
+              <input type="tel" id="phone" name="phone" placeholder="Ej: 3001234567" autocomplete="tel" aria-required="true" aria-describedby="err-phone">
+              <span class="form-error" id="err-phone" role="alert"></span>
             </div>
 
             <div class="form-field">
               <label for="email">Correo electrónico *</label>
-              <input type="email" id="email" name="email" placeholder="Ej: correo@ejemplo.com" autocomplete="email">
-              <span class="form-error" id="err-email"></span>
+              <input type="email" id="email" name="email" placeholder="Ej: correo@ejemplo.com" autocomplete="email" aria-required="true" aria-describedby="err-email">
+              <span class="form-error" id="err-email" role="alert"></span>
             </div>
 
             <div class="form-field">
-              <label for="address">Dirección *</label>
-              <input type="text" id="address" name="address" placeholder="Ej: Calle 10 # 5-20" autocomplete="street-address">
-              <span class="form-error" id="err-address"></span>
+              <label for="businessType">Tipo de negocio *</label>
+              <select id="businessType" name="businessType" aria-required="true" aria-describedby="err-businessType">
+                <option value="">Selecciona una opción</option>
+                <option value="Tienda o minimercado">Tienda o minimercado</option>
+                <option value="Restaurante, café o panadería">Restaurante, café o panadería</option>
+                <option value="Comercio especializado">Comercio especializado (ropa, ferretería, papelería…)</option>
+                <option value="Servicios u oficina">Servicios profesionales u oficina</option>
+                <option value="Producción agropecuaria">Producción agropecuaria o finca</option>
+                <option value="Taller o pequeña industria">Taller o pequeña industria</option>
+                <option value="Otro">Otro</option>
+              </select>
+              <span class="form-error" id="err-businessType" role="alert"></span>
             </div>
 
             <div class="form-field">
-              <label for="residential">Conjunto residencial *</label>
-              <input type="text" id="residential" name="residential" placeholder="Ej: Quintas del Marqués" value="Quintas del Marqués">
-              <span class="form-error" id="err-residential"></span>
+              <label for="zone">Ubicación del negocio *</label>
+              <select id="zone" name="zone" aria-required="true" aria-describedby="err-zone">
+                <option value="">Selecciona una opción</option>
+                <option value="Casco urbano">Casco urbano</option>
+                <option value="Vereda o zona rural">Vereda o zona rural</option>
+              </select>
+              <span class="form-error" id="err-zone" role="alert"></span>
+            </div>
+
+            <div class="form-field form-field--full">
+              <label for="address">Dirección o vereda *</label>
+              <input type="text" id="address" name="address" placeholder="Ej: Calle 10 # 5-20, o nombre de la vereda" autocomplete="street-address" aria-required="true" aria-describedby="err-address">
+              <span class="form-error" id="err-address" role="alert"></span>
             </div>
 
             <div class="form-field">
-              <label for="unit">Número de casa / apartamento *</label>
-              <input type="text" id="unit" name="unit" placeholder="Ej: Casa 14 / Apto 302">
-              <span class="form-error" id="err-unit"></span>
+              <label for="connection">¿Cómo te conectas hoy? *</label>
+              <select id="connection" name="connection" aria-required="true" aria-describedby="err-connection">
+                <option value="">Selecciona una opción</option>
+                <option value="No tengo internet">No tengo internet</option>
+                <option value="Solo datos móviles">Solo datos móviles</option>
+                <option value="Internet fijo inestable">Internet fijo, pero inestable</option>
+                <option value="Internet fijo estable">Internet fijo estable (busco un respaldo)</option>
+              </select>
+              <span class="form-error" id="err-connection" role="alert"></span>
             </div>
 
             <div class="form-field">
               <label for="plan">Plan seleccionado *</label>
-              <select id="plan" name="plan">
+              <select id="plan" name="plan" aria-required="true" aria-describedby="err-plan">
                 <option value="">Selecciona un plan</option>
-                <option value="Satelital Básico">Satelital Básico — $220.000 COP/mes</option>
-                <option value="Satelital Hogar">Satelital Hogar — $320.000 COP/mes</option>
-                <option value="Satelital Pro">Satelital Pro — $450.000 COP/mes</option>
+                <option value="Satelital Emprende">Satelital Emprende — $200.000 COP/mes · 120 Mbps</option>
+                <option value="Satelital Negocio">Satelital Negocio — $300.000 COP/mes · 250 Mbps</option>
+                <option value="Satelital Empresa">Satelital Empresa — $400.000 COP/mes · 400 Mbps</option>
               </select>
-              <span class="form-error" id="err-plan"></span>
+              <span class="form-error" id="err-plan" role="alert"></span>
             </div>
 
             <div class="form-field form-field--full">
@@ -406,7 +464,7 @@
             <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3>¡Solicitud enviada con éxito!</h3>
-          <p>Hemos recibido tu solicitud para el plan <strong id="successPlan">—</strong>. En esta versión de prototipo, tu solicitud se guarda localmente. Pronto podrás consultar su estado desde la plataforma.</p>
+          <p>Hemos recibido la solicitud de tu negocio para el plan <strong id="successPlan">—</strong>. Lo primero será verificar la cobertura y la factibilidad técnica de tu punto. En esta versión de prototipo, la solicitud se guarda localmente; pronto podrás consultar su estado desde la plataforma.</p>
           <p class="request-success__ref">Número de referencia: <strong id="successRef">—</strong></p>
           <button class="btn btn--outline" id="newRequestBtn">Enviar otra solicitud</button>
         </div>
@@ -420,21 +478,21 @@
       <div class="about reveal">
         <span class="eyebrow">Nosotros</span>
         <h2>Un proyecto académico con visión real</h2>
-        <p>SATELITAL es un proyecto académico desarrollado en el programa de Ingeniería de Sistemas, enfocado en diseñar una solución tecnológica que facilite la consulta y solicitud de servicios de internet satelital para comunidades como el conjunto residencial Quintas del Marqués, en Mosquera, Cundinamarca.</p>
-        <p>Este prototipo busca sentar las bases de una plataforma que, en etapas posteriores, se integrará con una API REST, un backend en Java Spring Boot o Python Flask, y una base de datos MySQL, para gestionar clientes, planes, solicitudes e instalaciones de forma real.</p>
+        <p>SATELITAL es un proyecto académico de Ingeniería de Sistemas, desarrollado en el semillero SIIANTEC de TEINCO, enfocado en una solución tecnológica que facilite la consulta y solicitud de servicios de internet satelital para los negocios locales de Mosquera, Cundinamarca, tanto del casco urbano como de las veredas.</p>
+        <p>Este prototipo sienta las bases de una plataforma de gestión que, en etapas posteriores, se integrará con una API REST y una base de datos para administrar negocios, planes, solicitudes, instalaciones y tickets de soporte.</p>
 
         <div class="about__grid">
           <div class="about__item">
             <h4>Misión</h4>
-            <p>Acercar la conectividad satelital de alta velocidad a hogares con acceso limitado a internet tradicional.</p>
+            <p>Acercar la conectividad satelital de alta velocidad a negocios locales con acceso limitado o inestable a internet.</p>
           </div>
           <div class="about__item">
             <h4>Visión</h4>
-            <p>Convertirse en una plataforma de referencia para la gestión de servicios de internet satelital en comunidades locales.</p>
+            <p>Convertirse en una plataforma de referencia para gestionar servicios de internet satelital en el tejido empresarial local.</p>
           </div>
           <div class="about__item">
             <h4>Enfoque</h4>
-            <p>Tecnología, inclusión digital y desarrollo comunitario como pilares del proyecto.</p>
+            <p>Competitividad, inclusión digital empresarial y desarrollo económico local como pilares del proyecto.</p>
           </div>
         </div>
       </div>
@@ -480,7 +538,7 @@
             <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
           </div>
           <h4>Ubicación</h4>
-          <p>Quintas del Marqués, Mosquera, Cundinamarca</p>
+          <p>Mosquera, Cundinamarca, Colombia</p>
         </div>
       </div>
     </div>
@@ -489,8 +547,8 @@
   <!-- ===== CTA FINAL ===== -->
   <section class="cta reveal">
     <div class="container cta__inner">
-      <h2>¿Listo para una conexión sin límites?</h2>
-      <p>Solicita hoy tu servicio SATELITAL y forma parte de la transformación digital de Mosquera.</p>
+      <h2>¿Tu negocio listo para conectarse sin límites?</h2>
+      <p>Solicita hoy el servicio SATELITAL y forma parte de la transformación digital de los negocios de Mosquera.</p>
       <a href="#solicitud" class="btn btn--primary btn--lg">Solicitar servicio</a>
     </div>
   </section>

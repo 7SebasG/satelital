@@ -2,7 +2,7 @@
 
 Prototipo académico de plataforma web para la comercialización y solicitud de servicios de **internet satelital**, tomando como referencia la tecnología de Starlink.
 
-Proyecto desarrollado en el marco del programa de **Ingeniería de Sistemas**, con el conjunto residencial **Quintas del Marqués (Mosquera, Cundinamarca, Colombia)** como zona piloto de referencia.
+Dirigido a los **negocios locales de Mosquera, Cundinamarca** (casco urbano y veredas). Proyecto desarrollado en el marco del programa de **Ingeniería de Sistemas** (semillero SIIANTEC, TEINCO). El contenido del sitio se basa en el documento `PROYECTO SATELITAL.pdf`: piloto de ~50 negocios, meta de 80 % de cobertura en 12 meses y 85 % de satisfacción tras tres meses de uso.
 
 > Este es un prototipo académico. Los precios, velocidades y datos de cobertura mostrados son de referencia y **no representan información oficial de Starlink**.
 
@@ -30,13 +30,13 @@ satelital/
 
 ## Secciones del sitio
 
-1. **Navbar** fijo con navegación por anclas y botón "Solicitar servicio".
+1. **Navbar** fijo con navegación por anclas, botón "Solicitar servicio" y botón para alternar entre tema oscuro (por defecto) y claro; la elección se guarda en el navegador.
 2. **Hero** con animación de satélite orbitando y contadores animados.
-3. **Beneficios**: 6 tarjetas (velocidad, cobertura, instalación, soporte, tecnología).
-4. **Planes**: 3 tarjetas de planes con precio y velocidad fácilmente editables.
-5. **Cómo funciona**: flujo visual Hogar → Antena → Satélite → Red de Internet → Hogar.
-6. **Cobertura**: información de la zona piloto (Quintas del Marqués, Mosquera) con aviso claro de que los datos son del prototipo, no de Starlink real.
-7. **Formulario de solicitud**: con validaciones en tiempo real y mensaje de confirmación.
+3. **Beneficios**: 6 tarjetas pensadas para negocios (pagos y ventas, conectividad satelital, casco urbano y veredas, instalación, soporte con seguimiento, tecnología de órbita baja).
+4. **Planes**: 3 tarjetas (Emprende $200.000 · 120 Mbps, Negocio $300.000 · 250 Mbps, Empresa $400.000 · 400 Mbps, precios mensuales). Los tres incluyen lo mismo; solo cambia la velocidad.
+5. **Cómo funciona**: flujo visual Negocio → Antena → Satélite → Red de Internet → Negocio, más los pasos posteriores a la solicitud (verificación de cobertura, visita, instalación, activación y capacitación).
+6. **Cobertura**: piloto por fases en Mosquera, con aviso claro de que las cifras son metas del proyecto, no datos medidos ni de Starlink real.
+7. **Formulario de solicitud**: datos del negocio (tipo, ubicación urbana/rural, conexión actual), validaciones en tiempo real y mensaje de confirmación.
 8. **Nosotros**: descripción del proyecto como iniciativa académica.
 9. **Contacto**: correo, teléfono, WhatsApp y ubicación (datos de ejemplo).
 10. **Footer**: marca, navegación secundaria y derechos de autor.
@@ -79,11 +79,13 @@ Backend (Spring Boot / Flask)
 Puntos de integración ya marcados en el código:
 
 - `js/script.js` — función `initRequestForm()`: el envío del formulario guarda los datos en `localStorage`; ahí se marcó con un comentario `TODO(API REST)` dónde reemplazar esa lógica por una petición `fetch` real hacia un endpoint como `POST /api/solicitudes`.
-- Los campos del formulario ya corresponden a los atributos que necesitaría una entidad `Solicitud` (nombre, teléfono, correo, dirección, conjunto residencial, unidad, plan, comentarios, estado, referencia).
+- Los campos del formulario ya corresponden a los atributos que necesitaría una entidad `Solicitud` (nombre del negocio, contacto, teléfono, correo, tipo de negocio, zona, dirección o vereda, conexión actual, plan, comentarios, estado, referencia).
 
-Entidades previstas para el backend: `Cliente`, `Plan`, `Solicitud`, `Instalación`, `Usuario`.
+Entidades previstas para el backend: `Usuario`, `NegocioLocal`, `Zona`, `Plan` (servicio de internet), `Solicitud`, `Instalación`, `Ticket`.
 
-La API podrá probarse posteriormente con **Postman** una vez esté disponible el backend en Spring Boot o Flask con MySQL.
+> **Decisión pendiente:** el documento del proyecto propone Node.js/Express + PostgreSQL + React, mientras que la idea inicial del prototipo era Spring Boot o Flask + MySQL. Hay que elegir una sola alternativa antes de construir el backend.
+
+La API podrá probarse posteriormente con **Postman** una vez esté disponible el backend.
 
 ## Autor
 

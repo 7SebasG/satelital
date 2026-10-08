@@ -5,6 +5,7 @@
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initNavbar();
   initMobileMenu();
   initScrollSpy();
@@ -13,6 +14,34 @@ document.addEventListener('DOMContentLoaded', () => {
   initPlanSelection();
   initRequestForm();
 });
+
+/* ------------------------------------------------------------
+   0. TEMA CLARO / OSCURO (oscuro por defecto, se recuerda la elección)
+   ------------------------------------------------------------ */
+function initThemeToggle() {
+  const button = document.getElementById('themeToggle');
+  if (!button) return;
+
+  const root = document.documentElement;
+
+  const refreshLabel = () => {
+    const isLight = root.getAttribute('data-theme') === 'light';
+    button.setAttribute('aria-label', isLight ? 'Cambiar a tema oscuro' : 'Cambiar a tema claro');
+  };
+
+  refreshLabel();
+
+  button.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    try {
+      localStorage.setItem('satelital_theme', next);
+    } catch (error) {
+      console.warn('No se pudo guardar el tema:', error);
+    }
+    refreshLabel();
+  });
+}
 
 /* ------------------------------------------------------------
    1. NAVBAR: fondo sólido al hacer scroll
@@ -60,7 +89,7 @@ function initMobileMenu() {
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 860) closeMenu();
+    if (window.innerWidth > 1000) closeMenu();
   });
 }
 
@@ -176,9 +205,9 @@ function initPlanSelection() {
 
       showToast(`Plan "${planName}" seleccionado. Completa tus datos para continuar.`);
 
-      const fullNameInput = document.getElementById('fullName');
+      const firstInput = document.getElementById('businessName');
       window.setTimeout(() => {
-        if (fullNameInput) fullNameInput.focus({ preventScroll: true });
+        if (firstInput) firstInput.focus({ preventScroll: true });
       }, 600);
     });
   });
@@ -197,10 +226,15 @@ function initRequestForm() {
   if (!form) return;
 
   const fields = {
-    fullName: {
-      el: document.getElementById('fullName'),
+    businessName: {
+      el: document.getElementById('businessName'),
+      validate: (v) => v.trim().length >= 2,
+      message: 'Ingresa el nombre de tu negocio.',
+    },
+    contactName: {
+      el: document.getElementById('contactName'),
       validate: (v) => v.trim().length >= 3,
-      message: 'Ingresa tu nombre completo (mínimo 3 caracteres).',
+      message: 'Ingresa el nombre de la persona de contacto (mínimo 3 caracteres).',
     },
     phone: {
       el: document.getElementById('phone'),
@@ -212,20 +246,25 @@ function initRequestForm() {
       validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
       message: 'Ingresa un correo electrónico válido.',
     },
+    businessType: {
+      el: document.getElementById('businessType'),
+      validate: (v) => v.trim().length > 0,
+      message: 'Selecciona el tipo de negocio.',
+    },
+    zone: {
+      el: document.getElementById('zone'),
+      validate: (v) => v.trim().length > 0,
+      message: 'Indica si tu negocio está en el casco urbano o en una vereda.',
+    },
     address: {
       el: document.getElementById('address'),
-      validate: (v) => v.trim().length >= 5,
-      message: 'Ingresa una dirección válida.',
+      validate: (v) => v.trim().length >= 3,
+      message: 'Ingresa la dirección o el nombre de la vereda de tu negocio.',
     },
-    residential: {
-      el: document.getElementById('residential'),
-      validate: (v) => v.trim().length >= 2,
-      message: 'Ingresa el nombre del conjunto residencial.',
-    },
-    unit: {
-      el: document.getElementById('unit'),
-      validate: (v) => v.trim().length >= 1,
-      message: 'Ingresa el número de casa o apartamento.',
+    connection: {
+      el: document.getElementById('connection'),
+      validate: (v) => v.trim().length > 0,
+      message: 'Cuéntanos cómo te conectas hoy.',
     },
     plan: {
       el: document.getElementById('plan'),
@@ -239,6 +278,7 @@ function initRequestForm() {
     const errorEl = document.getElementById(`err-${field.el.id}`);
     if (wrapper) wrapper.classList.toggle('has-error', Boolean(message));
     if (errorEl) errorEl.textContent = message || '';
+    field.el.setAttribute('aria-invalid', message ? 'true' : 'false');
   };
 
   const validateField = (key) => {
@@ -278,12 +318,14 @@ function initRequestForm() {
     }
 
     const requestData = {
-      fullName: fields.fullName.el.value.trim(),
+      businessName: fields.businessName.el.value.trim(),
+      contactName: fields.contactName.el.value.trim(),
       phone: fields.phone.el.value.trim(),
       email: fields.email.el.value.trim(),
+      businessType: fields.businessType.el.value,
+      zone: fields.zone.el.value,
       address: fields.address.el.value.trim(),
-      residential: fields.residential.el.value.trim(),
-      unit: fields.unit.el.value.trim(),
+      connection: fields.connection.el.value,
       plan: fields.plan.el.value,
       comments: document.getElementById('comments').value.trim(),
       status: 'Pendiente',
@@ -308,7 +350,6 @@ function initRequestForm() {
   if (newRequestBtn) {
     newRequestBtn.addEventListener('click', () => {
       form.reset();
-      document.getElementById('residential').value = 'Quintas del Marqués';
       Object.keys(fields).forEach((key) => setFieldError(fields[key], ''));
       form.hidden = false;
       if (successPanel) successPanel.hidden = true;
